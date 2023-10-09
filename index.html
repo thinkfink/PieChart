@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Eedge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pie chart</h1>
+        <div>
+            <canvas id="pie-chart"></canvas>
+        </div>
+
+        <script src="chart.min.js"></script>
+        <script>
+            new Chart(document.getElementById('pie-chart'), {
+              type: 'pie',
+              data: {
+                labels: ["Slice 1","Slice 2","Slice 3","Slice 4","Slice 5"],
+                datasets: [{
+                  backgroundColor: ["#e63946","#254BDD","#ffbe0b","#1d3557","#326998"
+                  ],
+                  data: [123,643,421,123,543]
+                }]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: 'Pie Chart'
+                },
+                responsive: true
+              }
+            });
+          </script>
+
+    </div>
+</body>
+</html>
